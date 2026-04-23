@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{instance_name}} 属性文件备份说明 / Property File Backup Guide</title>
+  <style>
+    body { margin:0; background:#f5f7fb; color:#1f2937; font-family:"Microsoft YaHei",Arial,sans-serif; }
+    .wrap { max-width: 900px; margin: 36px auto; padding: 0 20px 40px; }
+    .card { background:#fff; border:1px solid #e5e7eb; border-radius:18px; box-shadow:0 8px 24px rgba(15,23,42,.04); padding:24px 26px; margin-bottom:18px; }
+    h1 { margin:0 0 12px; font-size:30px; color:#111827; }
+    h2 { margin:0 0 12px; font-size:20px; color:#111827; }
+    p, li { color:#475467; line-height:1.8; }
+    code { background:#f3f4f6; padding:3px 8px; border-radius:8px; font-size:14px; }
+    .lang-note { font-size:14px; color:#667085; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>{{instance_name}} 属性文件备份设置 / Property File Backup Setup</h1>
+      <p>当前版本使用命令窗口问答式配置。<br>Now the setup uses a command-window Q&amp;A flow.</p>
+      <p class="lang-note">命令窗口启动后会先显示：<code>C-中文，E-English</code>，并根据输入切换界面语言。 / After launch, it first shows <code>C-中文，E-English</code> and switches UI language by your input.</p>
+    </div>
+
+    <div class="card">
+      <h2>Windows 用户 / Windows</h2>
+      <p>请双击同目录下的：</p>
+      <p><code>{{instance_label}}_属性备份.cmd</code></p>
+      <p>命令窗口会逐项提问，引导你输入每日备份时间、每周备份时间和备份路径，最后统一确认保存并生效。<br>The command window will guide you through daily time, weekly time, and backup path, then ask for final confirmation.</p>
+    </div>
+
+    <div class="card">
+      <h2>Mac 用户 / macOS</h2>
+      <p>请双击同目录下的：</p>
+      <p><code>{{instance_label}}_属性备份.command</code></p>
+      <p>命令窗口会逐项提问，引导你输入每日备份时间、每周备份时间和备份路径，最后统一确认保存并生效。<br>The command window will guide you through daily time, weekly time, and backup path, then ask for final confirmation.</p>
+      <p class="lang-note">如果 macOS 第一次阻止打开，请使用右键 → 打开。 / If macOS blocks the first launch, use right-click → Open.</p>
+    </div>
+
+    <div class="card">
+      <h2>当前默认值 / Current Defaults</h2>
+      <ul>
+        <li>每日备份时间 / Daily backup time：{{daily_time}}</li>
+        <li>每周备份时间 / Weekly backup time：{{weekly_day_text}} {{weekly_time}}</li>
+        <li>默认备份路径 / Default backup path：{{backup_root_display}}</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
